@@ -1,4 +1,7 @@
 -- ============================================================================
+-- Student Name: Joseph Kehinde Ajireloja
+-- Student ID: 301924175
+
 -- MIT 8103: Advanced Database Systems - Portfolio 1
 -- Organisation: Exlibron Library 
 -- DBMS: MySQL 8.0+ (InnoDB)
