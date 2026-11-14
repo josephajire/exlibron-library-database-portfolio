@@ -30,7 +30,7 @@ The logical design maps directly into six relational tables:
 3. **BOOKS** (`isbn` [PK], `title`, `author_name`, `publication_year`, `genre`)
 4. **BOOK_COPIES** (`copy_id` [PK], `isbn` [FK], `branch_id` [FK], `barcode` [UNIQUE], `copy_status`)
 5. **LOANS** (`loan_id` [PK], `copy_id` [FK], `member_id` [FK], `checkout_date`, `due_date`, `return_date`)
-6. **FINES** (`fine_id` [PK], `loan_id` [PK/FK, UNIQUE], `amount_ngn`, `payment_status`)
+6. **FINES** (`fine_id` [PK], `loan_id` [FK, UNIQUE], `amount_ngn`, `payment_status`)
 
 ---
 
@@ -67,14 +67,14 @@ The schema was systematically normalised to eliminate data redundancy and preven
 ## 6. Files and Practical Verification
 
 * **`er_diagram.png`**: Visual Entity-Relationship diagram illustrating entities, keys, and cardinalities.
-* **`01_create_schema.sql`**: MySQL DDL script creating the `exlibron_library` database, tables, keys, and `CHECK` constraints.
-* **`02_seed_data.sql`**: DML script populating sample Nigerian branch locations, members, books, physical copies, loans, and fines.
+* **`01_schema_creation.sql`**: MySQL DDL script creating the `exlibron_library` database, tables, keys, and `CHECK` constraints.
+* **`02_sample_data.sql`**: DML script populating sample Nigerian branch locations, members, books, physical copies, loans, and fines.
 * **`schema_verification.png`**: Screenshot showing successful table creation (`SHOW TABLES;`) and sample relational query execution in MySQL.
 
 ### How to Run Locally
 ```bash
-mysql -u root -p < 01_create_schema.sql
-mysql -u root -p < 02_seed_data.sql
+mysql -u root -p < 01_schema_creation.sql
+mysql -u root -p < 02_sample_data.sql
 ```
 
 ---
@@ -83,4 +83,3 @@ mysql -u root -p < 02_seed_data.sql
 * **AI Tool Used:** Google Gemini
 * **Purpose:** Used as a learning and structuring aid to refine the 3NF schema design, review MySQL `CHECK` constraint syntax, and format technical documentation.
 * **Verification:** All SQL DDL and DML scripts were executed, tested, and verified locally on MySQL 8.0, and the ER diagram was independently generated and reviewed against the relational schema.
-
