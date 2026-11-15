@@ -75,5 +75,5 @@ Developing the **Exlibron Library** portfolio progressively across relational, d
 
 * **AI Tool Used:** Google Gemini
 * **Purpose:** Used as a learning and structuring aid to refine SQL DDL/CTE scripts, composite indexing strategies, MongoDB document queries, and technical documentation formatting.
-* **Verification:** Every SQL script, index benchmark (`EXPLAIN ANALYZE`), two-connection concurrency lock test, and partitioning query was executed, debugged, and verified independently on the student's computer system in MySQL Workbench 8.0.
+* **Verification:** Every SQL script, index benchmark (`EXPLAIN ANALYZE`), two-connection concurrency lock test, and partitioning query was executed, debugged, and verified independently on my computer system in MySQL Workbench 8.0.
 
